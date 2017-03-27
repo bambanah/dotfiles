@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	gnome-terminal
+	termite
 
 # program launcher
 super + space
-	rofi -show run -color-enabled -color-window "#273238, #273238, #1e2529" -color-normal "#273238, #c1c1c1, #273238, #394249, #ffffff" -color-active "#273238, #80cbc4, #273238, #394249, #80cbc4" -color-urgent "#273238, #ff1844, #273238, #394249, #ff1844"
+	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -40,8 +40,8 @@ super + g
 	bspc node -s biggest
 
 # drop-down terminal
-super + e
-	tdrop -a -m -w 1920 -s dropdown gnome-terminal
+super + grave
+	tdrop -a -m -w 1920 -s dropdown termite
 
 #
 # state/flags
@@ -74,10 +74,6 @@ super + {_,shift + }c
 # focus the next/previous desktop
 super + bracket{left,right}
 	bspc desktop -f {prev,next}
-
-# focus the last node/desktop
-super + {grave,Tab}
-	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
 super + {o,i}
