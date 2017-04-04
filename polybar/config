@@ -21,8 +21,8 @@ font-4 = MaterialIcons:size=10;-1
 font-5 = Termsynu:size=8:antialias=false;0
 
 modules-left = powermenu bspwm
-modules-center = date
-modules-right = volume wireless-network cpu
+modules-center = date redshift
+modules-right = volume vpncheck wireless-network cpu
 
 [bar/right]
 monitor = HDMI-0
@@ -47,8 +47,21 @@ font-4 = MaterialIcons:size=10;-1
 font-5 = Termsynu:size=8:antialias=false;0
 
 modules-left = powermenu bspwm
-modules-center = date
-modules-right = volume wireless-network cpu
+modules-center = date redshift
+modules-right = volume vpncheck wireless-network cpu
+
+[module/redshift]
+type = custom/script
+interval = 5
+
+exec = ~/.config/polybar/redshift.sh
+
+[module/weather]
+type = custom/script
+interval = 10
+format = <label>
+format-prefix = " "
+exec = ~/.config/polybar/weather
 
 [module/backlight]
 type = internal/xbacklight
@@ -127,6 +140,15 @@ label-private = 
 label-private-foreground = #bd2c40
 label-private-underline = ${module/bspwm.label-monocle-underline}
 label-private-padding = ${module/bspwm.label-monocle-padding}
+
+[module/vpncheck]
+type = custom/script
+exec = pgrep openvpn
+interval = 5
+label = vpn
+format-underline = #268bd2
+format-prefix = " "
+format-prefix-foreground = #5b
 
 [module/bspwm-tmp]
 type = internal/bspwm
