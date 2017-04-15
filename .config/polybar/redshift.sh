@@ -20,3 +20,4 @@ elif [[ $temp -ge 4000 ]]; then
 else
     echo "%{F#D08770}$icon"       # Orange
 fi
+echo "%{F#EBCB8B}$icon" 

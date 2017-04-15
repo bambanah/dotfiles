@@ -41,7 +41,7 @@ super + g
 
 # drop-down terminal
 super + grave
-	tdrop -a -m -w 1920 -s dropdown termite
+	tdrop -m -a -w -2 -y 35 -s dropdown termite
 
 #
 # state/flags
@@ -125,8 +125,9 @@ super + alt + shift + {Left, Down, Up, Right}
 super + {Left, Down, Up, Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# adjust gap sizes
 super + {equal,minus}
-	bspc config window_gap $(( $(bspc config window_gap) {+,-} 5 ))
+	bspc config window_gap $(( $(bspc config window_gap) {-, +} 5 ))
 
-super + ctrl + {Left,Right,Up,Down}
+super + ctrl + shift + {Left,Right,Up,Down}
     bspc node @focused:/ --rotate {270,90,180,180}
