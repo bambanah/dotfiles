@@ -1,6 +1,8 @@
 # dotfiles
 My dotfiles for shit
+
 ##Screenshots
+
 ### Clean
 ![Clean](https://github.com/abdullaev/dotfiles/blob/master/.screenshots/1.png "Clean")
 
@@ -14,16 +16,12 @@ My dotfiles for shit
 + **compton** - Composite manager
 + **polybar** - Status bar
 + **termite** - Terminal emulator
-+ **zsh + oh-my-zsh** - Shell
++ **zsh + prezto** - Shell
 + **rofi** - Dynamic menu
-+ **mpd + ncmcpp** - Music player
-+ **cava** - Audio visualizer
-+ **ranger** - File manager
-+ **zathura** - Document reader
-+ **neovim** - Text editor
-+ **rtorrent** - BitTorrent client
++ **nautilus** - File manager
++ **atom** - Text editor
 
 ## GUI
-+ **arc-grey-darker** - GTK theme
++ **arc-grey-dark** - GTK theme
 + **paper** - Icon theme
 + **adwaita** - Cursor theme
