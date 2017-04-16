@@ -4,10 +4,10 @@ My dotfiles for shit
 ## Screenshots
 
 ### Clean
-![Clean](https://github.com/abdullaev/dotfiles/blob/master/.screenshots/1.png "Clean")
+![Clean](https://github.com/bambanah/dotfiles/screenshots/clean.png "Clean")
 
 ### Fake busy
-![Fake busy](https://github.com/abdullaev/dotfiles/blob/master/.screenshots/3.png "Fake busy")
+![Fake busy](https://github.com/bambanah/dotfiles/blob/master/screenshots/nusy.png "Fake busy")
 
 ## Installed software
 
