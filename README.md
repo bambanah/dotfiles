@@ -1,7 +1,7 @@
 # dotfiles
 My dotfiles for shit
 
-##Screenshots
+## Screenshots
 
 ### Clean
 ![Clean](https://github.com/abdullaev/dotfiles/blob/master/.screenshots/1.png "Clean")
@@ -9,7 +9,7 @@ My dotfiles for shit
 ### Fake busy
 ![Fake busy](https://github.com/abdullaev/dotfiles/blob/master/.screenshots/3.png "Fake busy")
 
-## Some installed software
+## Installed software
 
 + **bspwm** - Window manager
 + **sxhkd** - Hotkey daemon
