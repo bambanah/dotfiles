@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+CPID=$(pgrep -x compton)
+CCMD="compton --config ${HOME}/.config/compton/compton.conf -b"
+
+if [ ! -z "${CPID}" ] ; then
+  kill -TERM ${CPID}
+  sleep 0.5
+  ${CCMD}
+else
+  ${CCMD}
+fi

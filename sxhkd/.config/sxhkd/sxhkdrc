@@ -4,9 +4,9 @@
 
 # terminal emulator
 super + Return
-	termite
+	konsole
 
-# program launcher
+# program launcherw
 super + space
 	rofi -show run
 
@@ -24,7 +24,7 @@ super + alt + Escape
 	bspc quit
 
 # close and kill
-super + {_,shift + }q
+super + {_,shift + }w
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
@@ -53,7 +53,7 @@ super + {t,shift + t,s,f}
 
 # set the node flags
 super + ctrl + {x,y,z}
-	bspc node -g {locked,sticky,private}
+	bspc node -g {locked,sticky,private}0
 
 #
 # focus/swap

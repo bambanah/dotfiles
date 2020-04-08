@@ -1,0 +1,12 @@
+ #!/usr/bin/env bash
+
+CPID=$(pgrep -x sxhkd)
+CCMD="sxhkd"
+
+if [ ! -z "${CPID}" ] ; then
+  kill -TERM ${CPID}
+  sleep 0.5
+  ${CCMD} &
+else
+  ${CCMD} &
+fi
