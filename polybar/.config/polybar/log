@@ -1,0 +1,8 @@
+polybar|error: Disabling module "battery_i" (reason: No suitable way to get current charge state)
+polybar|error: Disabling module "battery" (reason: No suitable way to get current charge state)
+polybar|error: Disabling module "network_i" (reason: Invalid network interface "wlp58s0")
+polybar|error: Disabling module "network" (reason: Invalid network interface "wlp58s0")
+polybar|warn:  Dropping unmatched character 🙃 (U+1f643)
+polybar|warn:  Dropping unmatched character 🙃 (U+1f643)
+polybar|warn:  Dropping unmatched character 🙃 (U+1f643)
+polybar|warn:  Dropping unmatched character 🙃 (U+1f643)
