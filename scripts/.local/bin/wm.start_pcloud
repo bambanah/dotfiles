@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pcloudcc -u lachlanu@gmail.com -d

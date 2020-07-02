@@ -1,4 +1,4 @@
- 
+
 #!/bin/sh
 #
 # bspwm: external_rules_command
@@ -58,8 +58,8 @@ firefox() {
 	desktop=^1;
 }
 
-chromium() {
-	desktop=^1;
+kitty() {
+  state=pseudo_tiled;
 }
 
 gimp() {

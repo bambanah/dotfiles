@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kitty sh -c "sudo pacman -Syu"
