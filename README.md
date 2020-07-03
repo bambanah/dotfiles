@@ -5,13 +5,14 @@ My dotfiles for linux
 
 + **bspwm** - Window manager
 + **sxhkd** - Hotkey daemon
-+ **compton** - Composite manager
++ **picom** - Composite manager
 + **polybar** - Status bar
-+ **termite** - Terminal emulator
-+ **zsh + prezto** - Shell
++ **kitty** - Terminal emulator
++ **zsh + ohmyzsh (powerlevel10k)** - Shell
 + **rofi** - Dynamic menu
-+ **nautilus** - File manager
++ **dolphin** - File manager
 + **atom** - Text editor
++ **vscode** - Programming
 
 ## GUI
 + **arc-grey-dark** - GTK theme
