@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 CPID=$(pgrep -x picom)
-CCMD="picom"
+CCMD="picom -b"
 
 if [ ! -z "${CPID}" ] ; then
  kill -TERM ${CPID}

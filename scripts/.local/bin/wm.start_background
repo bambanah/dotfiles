@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
+# Set background
+feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
+spicetify update
+pywal-discord -p ~/install/LinuxED/EnhancedDiscord/styles
 
-# setting feh
-~/.fehbg
-
-#if [ -e ${FEH} ] ; then
-#  eval ${FEH}
-#fi
+# Reload wal
+wal -R
 
 # fix cursor icon
 xsetroot -cursor_name left_ptr
