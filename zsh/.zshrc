@@ -113,9 +113,12 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-wal-tile() {
-    wal -n -i "$@"
-    feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
-    spicetify update
-    pywal-discord -p ~/install/LinuxED/EnhancedDiscord/styles
+# wal-update() {
+#   wal -n -i "$@"
+#   spicetify update
+#   pywal-discord -p ~/install/LinuxED/EnhancedDiscord/styles
+# }
+
+screenshot() {
+  scrot ~/Pictures/screenshots/%Y-%M-%d-%H%M%S_scrot.png
 }

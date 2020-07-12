@@ -5,6 +5,7 @@ feh
 firefox
 git
 gitkraken
+htop
 kitty
 neofetch
 picom
@@ -22,3 +23,10 @@ yay
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
+
+ckb-next
+discord
+spotify
+spicetify
+enhanced-discord
+pywal
