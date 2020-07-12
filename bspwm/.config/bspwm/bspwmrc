@@ -1,5 +1,6 @@
 #! /bin/sh
 
+# Startup scripts
 wm.start_sxhkd &
 wm.start_background &
 wm.start_composite &
@@ -7,36 +8,46 @@ wm.start_polybar &
 wm.start_pcloud &
 wm.start_redshift &
 
-bspc monitor -d I II III IV V VI
+# Give each monitor 6 workspaces.
+for m in $(bspc query --monitors --names); do
+  bspc monitor $m -d 1 2 3 4 5 6
+done
 
-bspc config border_width                      1
-bspc config window_gap                        20
-bspc config top_padding                       20
-bspc config bottom_padding                    0
-bspc config left_padding                      0
-bspc config right_padding                     0
+# Create alias
+_() { bspc config "$@"; }
 
-bspc config split_ratio                       0.52
-bspc config borderless_monocle                true
-bspc config gapless_monocle                   true
-bspc config paddingless_monocle               true
-bspc config focus_follows_pointer             false
+# Border gap/padding
+_ border_width              2
+_ window_gap                20
+_ top_padding               20 # Height of polybar
+_ bottom_padding            0
+_ left_padding              0
+_ right_padding             0
 
-bspc config super                 mod4
-bspc config pointer_action1       move
-bspc config pointer_action2       resize_side
-bspc config pointer_action3       resize_corner
-bspc config click_to_focus        true
-bspc config normal_border_color   "#4e4f4c"
-bspc config focused_border_color  "#a8b7b4"
-bspc config presel_border_color   "#AC4142"
-bspc config presel_feedback_color "#aaaaaa"
+# Border colours
+_ normal_border_color       "#4e4f4c"
+_ focused_border_color      "#a8b7b4"
+_ presel_border_color       "#AC4142"
+_ presel_feedback_color     "#aaaaaa"
 
-bspc rule -a firefox desktop='^1'
-bspc rule -a kitty state=pseudo_tiled
-# bspc rule -a Gimp desktop='^8' state=floating follow=on
-# bspc rule -a mplayer2 state=floating
-# bspc rule -a Kupfer.py focus=on
-# bspc rule -a Screenkey manage=off
+# Tiling behaviour
+_ split_ratio               0.52
+_ borderless_monocle        true
+_ gapless_monocle           true
+_ paddingless_monocle       true
+_ single_monocle            false
 
-# bspc config external_rules_command "$(which bspwm-rules)"
+# Key/Input behavious
+_ super                     mod4
+_ pointer_action1           move
+_ pointer_action2           resize_side
+_ pointer_action3           resize_corner
+_ click_to_focus            true
+_ focus_follows_pointer     false
+_ pointer_follows_pointer   false
+
+# Window rules
+bspc rule -a kitty          state=pseudo_tiled
+bspc rule -a tdrop          state=floating
+bspc rule -a polybar        state=locked follow=on sticky=on
+bspc rule -a feh            state=floating

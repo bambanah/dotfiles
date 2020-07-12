@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
+# Hide plasma shell
+killall plasmashell
 
-# setting feh
+# Reload wal
+wal -R
+
+# Set background
 ~/.fehbg
-
-#if [ -e ${FEH} ] ; then
-#  eval ${FEH}
-#fi
 
 # fix cursor icon
 xsetroot -cursor_name left_ptr
