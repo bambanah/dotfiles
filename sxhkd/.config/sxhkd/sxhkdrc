@@ -18,6 +18,10 @@ super + space
 super + w
 	firefox
 
+# drop-down terminal
+super + grave
+	tdrop -ma -y "34" -w -4 kitty
+
 #
 # bspwm hotkeys
 #
@@ -42,9 +46,7 @@ super + y
 super + g
 	bspc node -s biggest
 
-# drop-down terminal
-super + grave
-	tdrop -m -a -w -2 -y 35 -s dropdown kitty
+
 
 #
 # state/flags

@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
-# Set background
-feh --bg-tile "$(< "${HOME}/.cache/wal/wal")"
-spicetify update
-pywal-discord -p ~/install/LinuxED/EnhancedDiscord/styles
+# Hide plasma shell
+killall plasmashell
 
 # Reload wal
 wal -R
+
+# Set background
+~/.fehbg
 
 # fix cursor icon
 xsetroot -cursor_name left_ptr
