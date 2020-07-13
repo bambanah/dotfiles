@@ -1,4 +1,4 @@
- #!/usr/bin/env bash
+#!/bin/bash
 
 CPID=$(pgrep -x sxhkd)
 CCMD="sxhkd"
