@@ -1,0 +1,12 @@
+#! /bin/sh
+
+CPID=$(pgrep -x dunst)
+CCMD="dunst"
+
+if [ ! -z "${CPID}" ] ; then
+  kill -TERM ${CPID}
+  sleep 0.5
+  ${CCMD} &
+else
+  ${CCMD} &
+fi
