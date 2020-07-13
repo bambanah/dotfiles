@@ -1,12 +1,10 @@
-#! /bin/sh
+#!/bin/bash
 
-CPID=$(pgrep -x dunst)
-CCMD="dunst"
+# Terminate dunst
+killall -q dunst
 
-if [ ! -z "${CPID}" ] ; then
-  kill -TERM ${CPID}
-  sleep 0.5
-  ${CCMD} &
-else
-  ${CCMD} &
-fi
+# Wait until the process has been shut down
+while pgrep -u $UID -x dunst >/dev/null; do sleep 1; done
+
+# Restart dunst
+dunst &

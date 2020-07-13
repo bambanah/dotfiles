@@ -1,12 +1,3 @@
 #!/usr/bin/env bash
 
-CPID=$(pgrep -x bspwm)
-CCMD="bspwm"
-
-if [ ! -z "${CPID}" ] ; then
-  kill -TERM ${CPID}
-  sleep 0.5
-  ${CCMD} &
-else
-  ${CCMD} &
-fi
+bspc wm -r

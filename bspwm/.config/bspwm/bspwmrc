@@ -7,21 +7,23 @@ wm.start_composite &
 wm.start_polybar &
 wm.start_pcloud &
 wm.start_redshift &
-/usr/bin/dunst &
+start_dunst &
 
 # Give each monitor 6 workspaces.
 for m in $(bspc query --monitors --names); do
   bspc monitor $m -d 1 2 3 4 5 6
 done
 
-# Create alias
+# Shorthand function
 _() { bspc config "$@"; }
 
 # Border gap/padding
 _ border_width              2
 _ window_gap                20
-_ top_padding               20 # Height of polybar
-_ bottom_padding            0
+
+# Top and bottom padding to account for polybar
+_ top_padding               20
+_ bottom_padding            20
 _ left_padding              0
 _ right_padding             0
 

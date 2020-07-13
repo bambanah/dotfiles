@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
 # Hide plasma shell
-killall plasmashell
+killall -q plasmashell
+
+# Wait for plasmashell to close
+while pgrep -u $UID -x plasmashell >/dev/null; do sleep 1; done
 
 # Reload wal
 wal -R
