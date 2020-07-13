@@ -51,7 +51,6 @@ super + g
 	bspc node -s biggest
 
 
-
 #
 # state/flags
 #
