@@ -5,8 +5,12 @@
 # by playerctl (usually Spotify)
 #
 
-# If no players are open, show nothing
-if [ "$(playerctl -l | grep -v playerctld | wc -l)" = 0 ]; then
+# Check if there are any players open
+playerctl status &> /dev/null
+
+# If previous command returns with an error, then no
+# players are open so show nothing
+if [ "$?" = 1 ]; then
 
   echo ""
 
