@@ -1,4 +1,5 @@
 configuration {
+  modi: "window,drun,ssh,combi";
   theme: "~/.cache/wal/colors-rofi-dark";
   font: "Fira Code 20";
   show-icons: true;
@@ -6,31 +7,31 @@ configuration {
 }
 
 * {
-active-foreground: @foreground;
+  active-foreground: @foreground;
 
-normal-background: @background;
-normal-foreground: @foreground;
+  normal-background: @background;
+  normal-foreground: @foreground;
 
-urgent-foreground: @foreground;
+  urgent-foreground: @foreground;
 
-alternate-active-background: @background;
-alternate-active-foreground: @foreground;
+  alternate-active-background: @background;
+  alternate-active-foreground: @foreground;
 
-alternate-normal-background: @background;
-alternate-normal-foreground: @foreground;
+  alternate-normal-background: @background;
+  alternate-normal-foreground: @foreground;
 
-alternate-urgent-background: @background;
-alternate-urgent-foreground: @foreground;
+  alternate-urgent-background: @background;
+  alternate-urgent-foreground: @foreground;
 
-selected-active-foreground: @foreground;
+  selected-active-foreground: @foreground;
 
-selected-normal-foreground: @foreground;
+  selected-normal-foreground: @foreground;
 
-selected-urgent-foreground: @foreground;
+  selected-urgent-foreground: @foreground;
 
-background-color: @background;
+  background-color: @background;
 
-border-color: @foreground;
+  border-color: @foreground;
 }
 
 

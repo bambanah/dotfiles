@@ -11,9 +11,13 @@ super + Escape
 super + Return
 	kitty
 
-# program launcherw
+# program launcher
 super + space
-	rofi -show drun -icon-theme "Papirus" -show-icons
+	rofi -show drun
+
+# window cycle
+alt + Tab
+	rofi -show window
 
 super + w
 	firefox
