@@ -4,10 +4,11 @@
 wm.start_sxhkd &
 wm.start_background &
 wm.start_composite &
-wm.start_polybar &
 wm.start_pcloud &
 wm.start_redshift &
 start_dunst &
+sleep 0.5
+wm.start_polybar &
 
 # Give each monitor 6 workspaces.
 for m in $(bspc query --monitors --names); do
@@ -23,7 +24,7 @@ _ window_gap                20
 
 # Top and bottom padding to account for polybar
 _ top_padding               20
-_ bottom_padding            20
+_ bottom_padding            30
 _ left_padding              0
 _ right_padding             0
 
