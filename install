@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Install pacman packages here
+sudo pacman -Syu
+sudo pacman -S - < pacman_pkgs
+yay -S - < yay_pkgs
+
+# Stow dotfiles
+stow bspwm dunst kitty neofetch picom polybar ranger\
+     redshift rofi scripts sxhkd wal wallpapers zsh

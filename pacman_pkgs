@@ -1,10 +1,11 @@
 atom
 bspwm
 code
+discord
+dunst
 feh
 firefox
 git
-gitkraken
 htop
 kitty
 neofetch
@@ -23,11 +24,3 @@ yay
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
-
-ckb-next
-discord
-spotify
-spicetify
-enhanced-discord
-pywal
-dunst
