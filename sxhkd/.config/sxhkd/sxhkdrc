@@ -13,7 +13,7 @@ super + Return
 
 # program launcherw
 super + space
-	rofi -show run
+	rofi -show drun -icon-theme "Papirus" -show-icons
 
 super + w
 	firefox
