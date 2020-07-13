@@ -49,6 +49,14 @@ super + grave
 XF86AudioPlay
 	playerctl play-pause
 
+# Media play/pause button
+XF86AudioNext
+	playerctl next
+
+# Media play/pause button
+XF86AudioPrev
+	playerctl previous
+
 # Media stop button
 XF86AudioStop
 	playerctl stop
