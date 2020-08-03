@@ -51,7 +51,7 @@ _ focus_follows_pointer     false
 _ pointer_follows_pointer   false
 
 # Window rules
-bspc rule -a kitty          state=pseudo_tiled
+bspc rule -a alacritty      state=pseudo_tiled
 bspc rule -a tdrop          state=floating
 bspc rule -a polybar        state=locked follow=on sticky=on
 bspc rule -a feh            state=floating
