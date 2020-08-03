@@ -15,6 +15,13 @@ super + alt + Escape
 	bspc wm -r
 
 #
+# ----- Exit Hotkeys -----
+#
+
+ctrl + alt + Delete
+	bspc quit
+
+#
 # ----- WM Independent Hotkeys -----
 #
 
@@ -24,7 +31,7 @@ super + w
 
 # Launch kitty
 super + Return
-	kitty
+	alacritty
 
 # Rofi
 super + space
