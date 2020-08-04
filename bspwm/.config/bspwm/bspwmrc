@@ -23,8 +23,8 @@ _ border_width              2
 _ window_gap                20
 
 # Top and bottom padding to account for polybar
-_ top_padding               35
-_ bottom_padding            40
+_ top_padding               0
+_ bottom_padding            0
 _ left_padding              0
 _ right_padding             0
 
