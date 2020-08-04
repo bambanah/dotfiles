@@ -122,3 +122,15 @@ source $ZSH/oh-my-zsh.sh
 screenshot() {
   scrot ~/Pictures/screenshots/%Y-%M-%d-%H%M%S_scrot.png
 }
+
+mod_sxhkd() {
+  nvim ~/.config/sxhkd/sxhkdrc
+}
+
+mod_bspwm() {
+  nvim ~/.config/bspmw/bspwmrc
+}
+
+mod_polybar() {
+  atom ~/.config/polybar
+}
