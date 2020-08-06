@@ -158,8 +158,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x282A36'
-    foreground: '0xF8F8F2'
+    background: %clbg%
+    foreground: %clfg%
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
@@ -168,25 +168,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xFF5555'
-    green:   '0x50FA7B'
-    yellow:  '0xF1FA8C'
-    blue:    '0xBD93F9'
-    magenta: '0xFF79C6'
-    cyan:    '0x8BE9FD'
-    white:   '0xBFBFBF'
+    black:   %cl0%
+    red:     %cl1%
+    green:   %cl2%
+    yellow:  %cl3%
+    blue:    %cl4%
+    magenta: %cl5%
+    cyan:    %cl6%
+    white:   %cl7%
 
   # Bright colors
   bright:
-    black:   '0x4D4D4D'
-    red:     '0xFF6E67'
-    green:   '0x5AF78E'
-    yellow:  '0xF4F99D'
-    blue:    '0xCAA9FA'
-    magenta: '0xFF92D0'
-    cyan:    '0x9AEDFE'
-    white:   '0xE6E6E6'
+    black:   %cl8%
+    red:     %cl9%
+    green:   %cl10%
+    yellow:  %cl11%
+    blue:    %cl12%
+    magenta: %cl13%
+    cyan:    %cl14%
+    white:   %cl15%
 
 # Visual Bell
 #
