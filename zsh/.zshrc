@@ -1,7 +1,6 @@
-# Import colorscheme from 'wal' asynchronously
-# &   # Run the process in the background.
-# ( ) # Hide shell job control messages.
+# Scripts to run at startup
 #(cat ~/.cache/wal/sequences &)
+pfetch
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -27,15 +26,10 @@ alias screenshot="scrot ~/Pictures/screenshots/%Y-%M-%d-%H%M%S_scrot.png"
 alias np="nvim ~/.config/polybar"
 alias nb="nvim ~/.config/bspwm/bspwmrc"
 alias ns="nvim ~/.config/sxhkd/sxhkdrc"
+alias v="nvim"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# TODO: Implement theme switch
-# wal-update() {
-#   wal -n -i "$@"
-#   spicetify update
-#   pywal-discord -p ~/install/LinuxED/EnhancedDiscord/styles
-# }
-
 export PATH=$PATH:/home/lachie/.yarn/bin
+
