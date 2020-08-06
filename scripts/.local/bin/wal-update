@@ -1,5 +1,0 @@
-#! /bin/sh
-
-wal -n -i "$@"
-spicetify update
-pywal-discord -p ~/install/LinuxED/EnhancedDiscord/styles
