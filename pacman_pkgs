@@ -9,7 +9,9 @@ git
 htop
 kitty
 neofetch
+nerd-fonts-complete
 picom
+playerctl
 polybar
 qbittorrent
 redshift
@@ -17,8 +19,6 @@ rofi
 snapd
 stow
 sxhkd
-ttf-fira-code
-yakuake
 yarn
 yay
 zsh
