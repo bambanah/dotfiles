@@ -1,11 +1,11 @@
 #! /bin/sh
 
 # Startup scripts
-wm.start_sxhkd &
-wm.start_background &
-wm.start_composite &
+start_sxhkd &
+start_background &
+start_composite &
 sleep 0.5
-wm.start_polybar &
+start_polybar &
 
 # Give each monitor 6 workspaces.
 for m in $(bspc query --monitors --names); do
