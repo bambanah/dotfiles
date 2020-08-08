@@ -97,7 +97,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: FiraCode Nerd Font
+    family: FiraMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     # style: Regular
@@ -136,13 +136,13 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 11.0
+  size: 8.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
-  #offset:
-  #  x: 0
-  #  y: 0
+  offset:
+    x: 0
+    y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
@@ -158,8 +158,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x282A36'
-    foreground: '0xF8F8F2'
+    background: "#282A36"
+    foreground: "#F8F8F2"
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
@@ -168,25 +168,25 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xFF5555'
-    green:   '0x50FA7B'
-    yellow:  '0xF1FA8C'
-    blue:    '0xBD93F9'
-    magenta: '0xFF79C6'
-    cyan:    '0x8BE9FD'
-    white:   '0xBFBFBF'
+    black:   "#000000"
+    red:     "#FF5555"
+    green:   "#50FA7B"
+    yellow:  "#F1FA8C"
+    blue:    "#BD93F9"
+    magenta: "#FF79C6"
+    cyan:    "#8BE9FD"
+    white:   "#BFBFBF"
 
   # Bright colors
   bright:
-    black:   '0x4D4D4D'
-    red:     '0xFF6E67'
-    green:   '0x5AF78E'
-    yellow:  '0xF4F99D'
-    blue:    '0xCAA9FA'
-    magenta: '0xFF92D0'
-    cyan:    '0x9AEDFE'
-    white:   '0xE6E6E6'
+    black:   "#4D4D4D"
+    red:     "#FF6E67"
+    green:   "#5AF78E"
+    yellow:  "#F4F99D"
+    blue:    "#CAA9FA"
+    magenta: "#FF92D0"
+    cyan:    "#9AEDFE"
+    white:   "#E6E6E6"
 
 # Visual Bell
 #
