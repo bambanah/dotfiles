@@ -4,7 +4,7 @@
 start_sxhkd &
 start_background &
 start_composite &
-sleep 0.5
+#sleep 0.5
 start_polybar &
 
 # Give each monitor 6 workspaces.
