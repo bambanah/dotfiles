@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Startup scripts
+start_pcloud &
+start_redshift &
+start_dunst &
+
+
+# --- Environment Variables ---
+
+# GTK Config Locations
+export GTK_RC_FILES=/etc/gtk/gtkrc:/home/lachie/.gtkrc:/home/lachie/.config/gtkrc:/home/lachie/.config/gtk-3.0/settings.ini
+export GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/lachie/.gtkrc-2.0:/home/lachie/.config/gtkrc-2.0
+
+# Pfetch Config
+export PF_INFO="ascii title os uptime pkgs memory shell editor wm"
+
+# Local scripts
+export PATH=$HOME/.local/bin:$PATH

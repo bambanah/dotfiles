@@ -1,14 +1,11 @@
 #! /bin/sh
 
 # Startup scripts
-wm.start_sxhkd &
-wm.start_background &
-wm.start_composite &
-wm.start_pcloud &
-wm.start_redshift &
-start_dunst &
+start_sxhkd &
+start_background &
+start_composite &
 sleep 0.5
-wm.start_polybar &
+start_polybar &
 
 # Give each monitor 6 workspaces.
 for m in $(bspc query --monitors --names); do
@@ -23,8 +20,8 @@ _ border_width              2
 _ window_gap                20
 
 # Top and bottom padding to account for polybar
-_ top_padding               20
-_ bottom_padding            30
+_ top_padding               0
+_ bottom_padding            0
 _ left_padding              0
 _ right_padding             0
 
@@ -39,7 +36,7 @@ _ split_ratio               0.52
 _ borderless_monocle        true
 _ gapless_monocle           true
 _ paddingless_monocle       true
-_ single_monocle            false
+_ single_monocle            true
 
 # Key/Input behavious
 _ super                     mod4
@@ -51,7 +48,15 @@ _ focus_follows_pointer     false
 _ pointer_follows_pointer   false
 
 # Window rules
-bspc rule -a kitty          state=pseudo_tiled
-bspc rule -a tdrop          state=floating
-bspc rule -a polybar        state=locked follow=on sticky=on
-bspc rule -a feh            state=floating
+bspc rule -a Alacritty      state=pseudo_tiled
+bspc rule -a feh            state=pseudo_tiled
+bspc rule -a Wpg			state=floating
+
+bspc subscribe node_state | while read -r _ _ _ node state status; do
+    if [[ "$state" == "monocle" ]]; then
+        case "$status" in
+            off) xprop -id "$node" -remove _COMPTON_SHADOW;;
+            on) xprop -id "$node" -f _COMPTON_SHADOW 32c -set _COMPTON_SHADOW 1;;
+        esac
+    fi
+done

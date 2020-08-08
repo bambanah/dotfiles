@@ -1,7 +1,7 @@
 configuration {
   modi: "window,drun,ssh,combi";
   theme: "~/.cache/wal/colors-rofi-dark";
-  font: "Iosevka 16";
+  font: "Iosevka 12";
   show-icons: true;
   icon-theme: "Papirus";
 }
