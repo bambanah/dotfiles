@@ -80,8 +80,15 @@ XF86AudioLowerVolume
 XF86AudioMute
 	amixer set Master toggle
 
-# -- Laptop Media --
+# -- Laptop Brightness --
 
+# Brightness up
+XF86MonBrightnessUp
+	brightnessctl set 10%+
+
+# Brightness up
+XF86MonBrightnessDown
+	brightnessctl set 10%-
 
 
 #
