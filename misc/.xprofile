@@ -4,6 +4,7 @@
 start_pcloud &
 start_redshift &
 start_dunst &
+nordvpn c &
 
 
 # --- Environment Variables ---
