@@ -1,3 +1,3 @@
 #!/bin/bash
 
-alacritty sh -c "sudo pacman -Syu && yay -Syu"
+alacritty -e sudo pacman -Syu && yay -Syu
