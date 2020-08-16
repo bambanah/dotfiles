@@ -7,3 +7,9 @@
 [submodule "zsh/.oh-my-zsh/custom/themes/powerlevel10k"]
 	path = zsh/.oh-my-zsh/custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule ".themes/dracula"]
+	path = .themes/dracula
+	url = https://github.com/dracula/gtk
+[submodule "/home/lachie/.oh-my-zsh/themes/powerlevel10k"]
+	path = /home/lachie/.oh-my-zsh/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
