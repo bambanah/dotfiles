@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Config
-alias valias="nvim ~/.bash_aliases"
+alias valias="nvim ~/.aliases"
 alias vbashrc="nvim ~/.bashrc"
 
 # Commands
@@ -19,8 +19,9 @@ alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%
 
 # Misc.
 alias gimme="sudo chown -R wm-admin"
+
 function repos() {
-	cd "/home/wm-admin/repos/${1:-.}" || exit
+	cd "$HOME/repos/${1:-.}" || cd "$HOME/repos" || return
 }
 
 #
