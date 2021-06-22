@@ -11,8 +11,7 @@ My dotfiles for linux
 + **zsh + ohmyzsh (powerlevel10k)** - Shell
 + **rofi** - Dynamic menu
 + **dolphin** - File manager
-+ **atom** - Text editor
-+ **vscode** - Programming
++ **vscode** - Text editor
 
 ## GUI
 + **arc-grey-dark** - GTK theme
