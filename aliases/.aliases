@@ -3,9 +3,13 @@
 # Config
 alias valias="nvim ~/.aliases"
 alias vbashrc="nvim ~/.bashrc"
+alias vzshrc="nvim ~/.zshrc"
 
 # Commands
 alias vim="nvim"
+
+# QoL
+alias c="code"
 alias v="nvim"
 
 # ls aliases
@@ -14,7 +18,7 @@ alias la='ls -A'
 alias l='ls -CF'
 
 # Git
-alias gclean="git clean -df && git reset --hard"
+alias gclean="git clean -xdf && git reset --hard"
 alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Misc.
