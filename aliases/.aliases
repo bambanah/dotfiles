@@ -23,6 +23,7 @@ alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%
 
 # Misc.
 alias gimme="sudo chown -R wm-admin"
+alias ipaddr=$'hostname -I | awk \'{print $1}\''
 
 function repos() {
 	cd "$HOME/repos/${1:-.}" || cd "$HOME/repos" || return
@@ -85,6 +86,10 @@ alias sa="./site_admin.sh"
 # Minification
 alias m="./site_admin.sh minify"
 alias mm="./site_admin.sh minify -no-minification"
+
+# App
+alias rebuild-android="wmapp remove-platform android && wmapp add-platform android && wmapp build android"
+alias reinstall-android="rebuild-android 2>&1 | tee tmp1; grep 'platforms/android/app/build/outputs/apk' tmp1 | sed -u -e 's/^[[:space:]]*//' > tmp2; adb install -r $(cat tmp2 2> /dev/null); rm tmp1 & rm tmp2"
 
 # VM UUID Swapper
 # If no argument is provided, return the current VM
