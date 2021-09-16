@@ -23,9 +23,12 @@ alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%
 
 # Misc.
 alias gimme="sudo chown -R wm-admin"
-alias ipaddr=$'hostname -I | awk \'{print $1}\''
 
-function repos() {
+ipaddr() {
+	hostname -I | awk '{print $1}'
+}
+
+repos() {
 	cd "$HOME/repos/${1:-.}" || cd "$HOME/repos" || return
 }
 
@@ -42,9 +45,7 @@ setup_cbot() {
 	cd clientside || exit
 	yarn install
 
-	echo -e "\n\nCreating initial DB migration...\n\n"
 	cd ../serverside/src || exit
-	dotnet ef migrations add InitialMigration
 
 	echo -e "\n\nSeeding database...\n\n"
 	dotnet ef database update
@@ -160,7 +161,13 @@ switchvm() (
 # ----- NGR -----
 #
 
+alias ngr-l="~/repos/myNGR.Parent/manage_local_servers.sh"
+
 alias ngr-deps="~/repos/myNGR.Parent/manage_local_servers.sh start_server dependencies"
+alias ngr-rails="~/repos/myNGR.Parent/manage_local_servers.sh start_server rails"
+
+alias ngr-start="~/repos/myNGR.Parent/manage_local_servers.sh start_server"
+alias ngr-stop="~/repos/myNGR.Parent/manage_local_servers.sh stop_server"
 
 alias ngr-uat-tunnel="ssh -N -L 7778:sqllstrAGNGR.my.cloud:9999 ngradmin@103.235.96.36 &"
 alias ngr-prd-tunnel="ssh -N -L 7777:sqllstrNGRprod.my.cloud:9999 ngradmin@103.235.96.36 &"
@@ -168,4 +175,3 @@ alias ngr-dev-db-container="sudo docker exec -it myngr_db_1 /bin/bash"
 alias ngr-dev-db-container-root="sudo docker exec -it --privileged --user root myngr_db_1 /bin/bash"
 alias ngr-edocs-error-log="nc 192.168.15.114 5678"
 alias ngr-rc="set -a; source ~/repos/myNGR.Parent/myNGR/.env.development; RAILS_ENV=development bundle exec rails c"
-
