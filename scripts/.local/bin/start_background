@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# Set background
-~/.fehbg
-
-# fix cursor icon
-xsetroot -cursor_name left_ptr
