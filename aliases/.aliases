@@ -24,6 +24,14 @@ alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%
 # Misc.
 alias gimme="sudo chown -R wm-admin"
 
+# Receives a wormhole log into an appropriately named file
+wr() {
+	# $1: Will be appended to the beginning of the filename (usually beta or prod)
+	# $2: The wormhole code
+	fileName="$1_$(date +'%d-%m-%y_%H:%M').txt"
+	wormhole receive -o "$fileName" "$2"
+}
+
 ipaddr() {
 	hostname -I | awk '{print $1}'
 }
