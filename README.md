@@ -59,8 +59,10 @@ yay -S thunar thunar archive-plugin file-roller
 
 ### Clone this repo
 
+You will need to have generated an SSH key and added it to your github (or alternatively, use the read-only URL of `https://github.com/lachie-underhill/dotfiles`).
+
 ```sh
-git clone https://github.com/lachie-underhill/dotfiles $HOME/dotfiles
+git clone git@github.com:lachie-underhill/dotfiles.git $HOME/dotfiles
 cd $HOME/dotfiles
 ```
 
@@ -72,7 +74,6 @@ You'll notice that all of the config is stored in folders pertaining to the soft
 
 You can then use stow to create symlinks in the required config location for those apps to pick them up.
 
-
 ```sh
 stow hyprland nvim waybar
 ```
@@ -81,7 +82,6 @@ stow hyprland nvim waybar
 
 If you're interested in learning more about how this method works, I'd highly recommend checking out [this article](https://alexpearce.me/2016/02/managing-dotfiles-with-stow/) by Alex Pearce.
 
-
 ## Credits
 
 [/r/unixporn](https://reddit.com/r/unixporn) for endless inspo
@@ -89,6 +89,7 @@ If you're interested in learning more about how this method works, I'd highly re
 ---
 
 <details>
+
 <summary><b>Detailed Breakdown of my Arch Install</b></summary>
 
 #### Disclaimer
