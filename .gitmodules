@@ -11,3 +11,6 @@
 [submodule "zsh/.zsh-custom/plugins/zsh-nvm"]
 	path = zsh/.zsh-custom/plugins/zsh-nvm
 	url = https://github.com/lukechilds/zsh-nvm
+[submodule "mac/.config/tmux/plugins/tpm"]
+	path = mac/.config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git

@@ -1,0 +1,78 @@
+#!/bin/bash
+
+# --- Variables---
+
+REPOS_DIR="$HOME/git"
+
+# --- Aliases
+
+# General
+alias reload="source ~/.zshrc"
+alias v="nvim"
+alias la="ls -a"
+alias ll="ls -l"
+alias lla="ls -la"
+
+alias cat="bat"
+alias cd="z"
+
+# Git
+alias g="git"
+alias gd="git diff"
+alias gs="git status"
+alias gp="git push"
+alias gpf="git push --force"
+alias gc="git commit"
+alias gca="git commit --amend"
+alias gcae="git commit --amend --no-edit"
+
+# Config
+alias valias="nvim ~/.aliases"
+alias vbashrc="nvim ~/.bashrc"
+alias vzshrc="nvim ~/.zshrc"
+
+# Gcloud
+alias gauth="gcloud auth login && gcloud auth application-default login"
+alias gtoken="gcloud auth application-default print-access-token"
+
+alias gconfig="gcloud config configurations activate"
+alias gconfiglist="gcloud config configurations list"
+
+# API
+alias mti="make test-integration"
+alias mtm="make test-marked"
+alias mta="make test-all"
+alias mdev="make dev"
+
+# --- Functions---
+
+cdprop () {
+    target_name="core-api"
+    if [ $1 ]
+    then
+        target_name=$1
+    fi
+    cd $REPOS_DIR/mk-propel-$target_name
+}
+
+repos() {
+    cd "$REPOS_DIR/${1:-.}" || cd "$REPOS_DIR" || return
+}
+
+
+# ----- THE SHADOW REALM (Auslab) -----
+
+# Trigger Full Auslab Denorm
+alias tfa='gcloud storage cp -r gs://pmac-propel-uat-auslab-csv-ingest-australia-southeast1/full gs://pmac-propel-uat-auslab-csv-ingest-australia-southeast1/full-$(date +"%Y%m%d-%H%M")'
+
+
+publishhl7() {
+	curl -X POST \
+	-H "Authorization: Bearer $(gcloud auth application-default print-access-token)" \
+	-H "Content-Type: application/json; charset=utf-8" \
+	--data "{
+      		'pubsubDestination': {
+        		'pubsubTopic': 'projects/pmac-propel-uat-quarantine/topics/mllp-adapter'
+      		}
+    	}" "https://healthcare.googleapis.com/v1/projects/pmac-propel-uat-quarantine/locations/australia-southeast1/datasets/mllp-adapter/hl7V2Stores/raw:export"
+}
