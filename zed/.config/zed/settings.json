@@ -1,0 +1,105 @@
+// documentation: https://zed.dev/docs/configuring-zed
+// `zed: open default settings`
+{
+  // general
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always",
+          },
+        },
+      },
+      "enable_lsp_tasks": true,
+    },
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "default_config_options": {
+        "model": "claude-fable-5[1m]",
+      },
+      "type": "registry",
+    },
+  },
+  "format_on_save": "on",
+  "linked_edits": true,
+  "tab_size": 2,
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware",
+    "background_coloring": "disabled",
+  },
+  "lsp_document_colors": "background",
+  "cli_default_open_behavior": "new_window",
+
+  // typography
+  "ui_font_family": ".ZedSans",
+  "ui_font_size": 15.0,
+  "colorize_brackets": true,
+  "buffer_font_family": "Monaspace Neon",
+  "buffer_line_height": "standard",
+  "buffer_font_size": 14.0,
+  "terminal": {
+    "font_family": "Monaspace Neon",
+    "font_size": 14,
+    "dock": "bottom",
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+  },
+
+  // theme
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
+  },
+  "icon_theme": "Material Icon Theme",
+
+  // layout
+  "project_panel": {
+    "starts_open": true,
+    "dock": "right",
+  },
+  "outline_panel": {
+    "dock": "right",
+  },
+  "agent": {
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "git_panel": {
+    "sort_by_path": false,
+    "tree_view": true,
+    "dock": "right",
+  },
+  "resize_all_panels_in_dock": ["left", "bottom", "right"],
+  "minimap": {
+    "show": "auto",
+    "thumb": "always",
+  },
+
+  // language-specific
+  "languages": {
+    "Markdown": {
+      "format_on_save": "off",
+    },
+    "CSS": {
+      "language_servers": [
+        "tailwindcss-intellisense-css",
+        "!vscode-css-language-server",
+        "...",
+      ],
+    },
+  },
+}
