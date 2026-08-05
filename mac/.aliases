@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# --- Variables---
-
-REPOS_DIR="$HOME/git"
-
 # --- Aliases
 
 # General
@@ -14,9 +10,12 @@ alias ll="ls -l"
 alias lla="ls -la"
 alias t="tmux"
 alias tat="tmux attach -t"
+alias cc="claude --dangerously-skip-permissions"
 
 alias cat="bat"
-alias cd="z"
+if [ -z "$DISABLE_ZOXIDE" ]; then
+    alias cd="z"
+fi
 
 # Git
 alias g="git"
@@ -28,13 +27,20 @@ alias gc="git commit"
 alias gca="git commit --amend"
 alias gcae="git commit --amend --no-edit"
 
+# Docker
+alias d="docker"
+alias dc="docker compose"
+alias dcu="docker compose up"
+alias dcud="docker compose up -d"
+alias dcd="docker compose down"
+
 # Config
 alias valias="nvim ~/.aliases"
 alias vbashrc="nvim ~/.bashrc"
 alias vzshrc="nvim ~/.zshrc"
 
 # Gcloud
-alias gauth="gcloud auth login && gcloud auth application-default login"
+alias gauth="gcloud auth application-default login"
 alias gtoken="gcloud auth application-default print-access-token"
 
 alias gconfig="gcloud config configurations activate"
@@ -48,19 +54,13 @@ alias mdev="make dev"
 
 # --- Functions---
 
-cdprop () {
-    target_name="core-api"
-    if [ $1 ]
-    then
-        target_name=$1
-    fi
-    cd $REPOS_DIR/mk-propel-$target_name
+lsport() {
+    lsof -i tcp:"$1" | awk 'NR!=1 {print $2}'
 }
 
-repos() {
-    cd "$REPOS_DIR/${1:-.}" || cd "$REPOS_DIR" || return
+killport() {
+    lsport $1 | xargs kill
 }
-
 
 # ----- THE SHADOW REALM (Auslab) -----
 

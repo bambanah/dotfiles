@@ -1,8 +1,6 @@
 # oh-my-zsh config
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME=""
-
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
@@ -18,13 +16,6 @@ source $HOME/.aliases
 
 # --- Tools ---
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-
 export PATH=$PATH:$HOME/.local/bin
 
 if [ -f '/Users/lachlanunderhill/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lachlanunderhill/google-cloud-sdk/path.zsh.inc'; fi
@@ -34,5 +25,15 @@ fpath+=~/.zfunc
 autoload -Uz compinit && compinit
 
 eval "$(starship init zsh)"
-eval "$(pyenv init -)"
-eval "$(zoxide init zsh)"
+if [ -z "$DISABLE_ZOXIDE" ]; then
+    eval "$(zoxide init zsh)"
+fi
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+# pnpm
+export PNPM_HOME="/Users/lachlanunderhill/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
