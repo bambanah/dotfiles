@@ -19,6 +19,13 @@
       "enable_lsp_tasks": true,
     },
   },
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "dockerfile": true,
+    "color-highlight": true,
+    "html": true,
+    "material-icon-theme": true,
+  },
   "collaboration_panel": {
     "button": false,
   },
