@@ -59,6 +59,7 @@
     "font_family": "Monaspace Neon",
     "font_size": 14,
     "dock": "bottom",
+    "detect_venv": "off",
     "toolbar": {
       "breadcrumbs": false,
     },
