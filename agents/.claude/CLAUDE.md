@@ -1,4 +1,4 @@
-# global agent instructions
+# Global Agent Instructions
 
 ## Writing
 - Write plain dash "-" wherever you would reach for an em dash "—": prose, commits, new code. Leave existing code as it is.
