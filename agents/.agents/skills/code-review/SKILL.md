@@ -35,7 +35,7 @@ Look for the originating spec, in this order:
 
 Anything in the repo that documents how code should be written, such as `CODING_STANDARDS.md` or `CONTRIBUTING.md`.
 
-On top of whatever the repo documents, the Standards axis always carries the **smell baseline** below — a fixed set of Fowler code smells (_Refactoring_, ch.3) that applies even when a repo documents nothing. Two rules bind it:
+On top of whatever the repo documents, the Standards axis always carries the **smell baseline** below — the Fowler code smells (_Refactoring_, ch.3) plus the comment rule, applying even when a repo documents nothing. Two rules bind it:
 
 - **The repo overrides.** A documented repo standard always wins; where it endorses something the baseline would flag, suppress the smell.
 - **Always a judgement call.** Each smell is a labelled heuristic ("possible Feature Envy"), never a hard violation — and, like any standard here, skip anything tooling already enforces.
@@ -54,6 +54,7 @@ Each smell reads *what it is* → *how to fix*; match it against the diff:
 - **Message Chains** — long `a.b().c().d()` navigation the caller shouldn't depend on. → hide the walk behind one method on the first object.
 - **Middle Man** — a class or function that mostly just delegates onward. → cut it, call the real target direct.
 - **Refused Bequest** — a subclass or implementer that ignores or overrides most of what it inherits. → drop the inheritance, use composition.
+- **Unearned Comment** — a comment slower to read than the code it describes, or longer than the fewest words that work. A comment earns its place only by being faster to read than that code, or by carrying context the neighbouring code and the implementations it references do not. → delete it, or cut it to the earned part; leave self-explanatory code bare.
 
 ### 4. Spawn both sub-agents in parallel
 

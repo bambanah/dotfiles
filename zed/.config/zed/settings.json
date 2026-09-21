@@ -2,6 +2,8 @@
 // `zed: open default settings`
 {
   // general
+  "semantic_tokens": "combined",
+
   "lsp": {
     "vtsls": {
       "settings": {
@@ -99,6 +101,7 @@
 
   // language-specific
   "languages": {
+    "YAML": { "tab_size": 2 },
     "Markdown": {
       "format_on_save": "off",
     },

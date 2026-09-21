@@ -1,8 +1,7 @@
 ---
 name: manage-plans
-description: Save the current plan to plans/, resume a saved plan, or review and prune old ones.
+description: Save the current plan to plans/, implement or resume a saved plan, or review and prune old ones. Use when the user asks to do anything with a plan.
 argument-hint: "save | resume <plan> | review"
-disable-model-invocation: true
 ---
 
 A plan outlives the session that made it. Plans live as markdown in `plans/` at the root of the working directory, one file per plan, named `plans/YYYY-MM-DD-<slug>.md` - the date it was created, so age reads at a glance.
