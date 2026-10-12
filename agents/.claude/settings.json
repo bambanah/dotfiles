@@ -24,5 +24,12 @@
   "theme": "dark-ansi",
   "autoCompactEnabled": false,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "autoMode": {
+    "soft_deny": [
+      "$defaults",
+      "Bash(rm:releases/*)",
+      "Bash(git push:main)"
+    ]
+  }
 }

@@ -1,12 +1,12 @@
 ---
 name: manage-plans
-description: Save the current plan to plans/, implement or resume a saved plan, or review and prune old ones. Use when the user asks to do anything with a plan.
-argument-hint: "save | resume <plan> | review"
+description: Save the current plan to plans/, implement or resume a saved plan, mark one complete, or review and prune old ones. Use when the user asks to do anything with a plan.
+argument-hint: "save | resume <plan> | complete <plan> | review"
 ---
 
-A plan outlives the session that made it. Plans live as markdown in `plans/` at the root of the working directory, one file per plan, named `plans/YYYY-MM-DD-<slug>.md` - the date it was created, so age reads at a glance.
+A plan outlives the session that made it. Plans live as markdown in `plans/` at the root of the working directory, one file per plan, named `plans/NNNN-<slug>.md` - a zero-padded sequence number, so the latest sorts last. Completed plans move to `plans/complete/`, keeping their filename.
 
-Three branches: **save** the plan from this conversation, **resume** a saved one, **review** what has piled up. Pick by what the user asked for; default to save.
+Four branches: **save** the plan from this conversation, **resume** a saved one, **complete** one the user declares done, **review** what has piled up. Pick by what the user asked for; default to save.
 
 ## Cold start
 
@@ -16,8 +16,8 @@ That is the bar for saving: an agent opening only this file executes the plan en
 
 ## Save
 
-1. Get the date: `date +%F`.
-2. Write `plans/YYYY-MM-DD-<slug>.md` using the template below, creating `plans/` if it is missing.
+1. Get the date: `date +%F`, and the next number: one past the highest `NNNN` across `plans/` and `plans/complete/`, or `0001`.
+2. Write `plans/NNNN-<slug>.md` using the template below, creating `plans/` if it is missing.
 3. Tell the user the path.
 
 ```markdown
@@ -56,12 +56,21 @@ so a later agent extends the plan instead of re-litigating it>
 
 ## Resume
 
-1. Read the plan file named by the user; when they named none, `ls plans/` and ask which.
+1. Read the plan file named by the user; when they named none, list the plan files in `plans/` and ask which.
 2. Execute the unchecked steps.
 3. Keep the file current as you go: tick steps as they complete, and record any decision made or question answered during execution in its section. The plan stays cold-start executable for the session after this one.
+4. When every step is ticked, tell the user the plan is ready to complete and leave the file where it is.
+
+## Complete
+
+Completion is the user's call: run this branch only when they declare a plan done.
+
+1. Resolve the plan file they named in `plans/`.
+2. `mkdir -p plans/complete && mv plans/<file> plans/complete/`.
+3. Tell the user the new path.
 
 ## Review
 
-1. `ls plans/` and read each file's `created` date and title.
-2. Report them oldest first, with age in days and a one-line gist, marking any whose steps are all ticked.
+1. List the plan files in `plans/` and read each one's `created` date and title.
+2. Report them oldest first, with age in days and a one-line gist, marking any whose steps are all ticked as ready to complete.
 3. Delete only the plans the user names.
