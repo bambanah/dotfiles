@@ -1,2 +1,4 @@
 neovim/.config/nvim/autoload/plugged/
 .DS_Store
+
+agents/.claude/skills/synced/
