@@ -6,7 +6,8 @@
 - A comment must earn its place: write one only when it is faster to read than the code it describes, or carries context unavailable from the neighbouring code and from clicking through to references and implementations. Keep earned comments to the fewest words that work; leave self-explanatory code bare.
 
 ## Commits & PRs
-- Write commit messages as a concise title only: no body, no `Co-Authored-By` trailer.
+- Write commit messages as a concise title, with no `Co-Authored-By` trailer. A body must earn its place: add one only to carry context a reader needs and cannot get from the title and diff.
+- End PR descriptions on their own content, with no "Generated with Claude Code" footer.
 - Always ask for explicit approval before commenting on github or pushing a branch
 
 ## Engineering standard
